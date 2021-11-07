@@ -1,0 +1,11 @@
+<h1> Welcome </h1>
+
+
+<p>
+    <% if user_signed_in? %>
+        <%= link_to 'Se decnonecter', destroy_user_session_path, method: :delete %>
+    <% else %>
+    <%= link_to 'Se connecter', new_user_session_path %>
+    <%= link_to 'Se connecter via facebook', user_facebook_omniauth_authorize_path %>
+    <% end %>
+</p>
